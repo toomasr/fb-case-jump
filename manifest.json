@@ -1,0 +1,14 @@
+{
+    "name": "FB Case Jump",
+    "version": "1.0",
+    "description": "Provides a quick way to access your cases.",
+    "omnibox": { "keyword" : "fb" },
+    "permissions": [ "tabs", "http://www.google.com/" ],
+    "background_page": "background.html",
+    "options_page": "options.html",
+    "browser_action": {
+        "default_title": "",
+        "default_icon": "icon.png",
+        "popup": "popup.html"
+    }
+}
