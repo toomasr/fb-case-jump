@@ -1,0 +1,6 @@
+*********************************************
+             FB Case Jump Changelog
+*********************************************
+
+1.0.2 (8th November 2011)
+ * Removed the requirement for google.com permissions

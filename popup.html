@@ -7,11 +7,21 @@
        font-size:11pt;
    }
 </style>
+
+<script>
+    function openOptions() {
+        newUrl = chrome.extension.getURL("options.html");
+
+        chrome.tabs.getSelected(null, function(tab) {
+            chrome.tabs.update(tab.id, {url: newUrl});
+        });
+    }
+</script>
 </head>
 <body> 
 
 <div>
-    <a href="">Options</a>
+    <a href="#" onClick="openOptions()">Options</a>
 </div>
 
 </body>
