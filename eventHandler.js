@@ -1,4 +1,3 @@
-<script>
 chrome.omnibox.onInputEntered.addListener(
 function(text) {
    var host = localStorage['url']
@@ -18,4 +17,3 @@ function(text) {
             chrome.tabs.update(tab.id, {url: newUrl});
    });
 });
-</script>

@@ -1,34 +1,6 @@
 <!doctype html>
 <html>
 <head>
-<script>
-   function closeTab() {
-      chrome.tabs.getSelected(null, function(tab) {
-         chrome.tabs.remove(tab.id)
-      })
-   }
-
-   function save() {
-      var newUrl=document.getElementById('url').value
-      newUrl = newUrl.replace(/^\s\s*/, '').replace(/\s\s*$/, '');
-      if (newUrl.indexOf("http://") != 0 && newUrl.indexOf("https://")!=0) {
-         newUrl = "http://"+newUrl 
-      }
-      if (newUrl.substr(-1) !== "/") {
-         newUrl = newUrl+"/" 
-      }
-      localStorage.url = newUrl
-      document.getElementById("url").value = newUrl
-      alert("Options saved")
-   }
-
-   window.onload = function() {
-      var url = localStorage.url;
-      if (url == null || url.length == 0)
-         url = "http://"
-      document.getElementById("url").value = url
-   }
-</script>
 <style>
    INPUT[type="submit"] {
       background-color: #E1E1E1;
@@ -76,8 +48,9 @@
 
 <input id="url" type="text" style="width:250px"> 
 <br/>
-<input type="submit" onClick="save()" value="Save options">
-or <a href="#" onClick="closeTab()">close</a>
+<input type="submit" id="save" value="Save options">
+or <a href="#" id="close">close</a>
 
 </body>
+<script src="options.js"></script>
 </html>
