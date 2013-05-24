@@ -3,6 +3,7 @@
 *********************************************
 
 1.0.3 (24th May 2013)
+ * Plugin upgraded to manifest 2 
  * Updated some messages 
 
 1.0.2 (8th November 2011)
